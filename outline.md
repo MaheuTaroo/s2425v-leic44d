@@ -20,3 +20,15 @@
 
 For reference: 
   * [Lecture video (in Portuguese)](https://www.youtube.com/watch?v=wGNDe1QB0LM&list=PL8XxoCaL3dBhX9Kqt_BfAE23D4zYqgLdN&index=1)
+
+### 24/02/2025 - Threading on the JVM: Thread States
+* Classifying state: 
+  * Private - exclusive to the thread (e.g. in its stack)
+  * Shared - stored globally or accessible through a closure
+* Threading on the JVM
+  * Thread states and lifecycle (introduction)
+  * Synchronization mechanisms (introduction)
+    * Coordinating threads: sincronization with thread termination `thread.join()`
+
+For reference: 
+  * [Lecture video (in Portuguese)](https://www.youtube.com/watch?v=hWzWrN7sejc&list=PL8XxoCaL3dBhX9Kqt_BfAE23D4zYqgLdN&index=2)

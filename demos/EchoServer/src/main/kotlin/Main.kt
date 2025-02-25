@@ -6,6 +6,8 @@ import java.io.BufferedWriter
 import java.net.InetSocketAddress
 import java.net.ServerSocket
 import java.net.Socket
+import java.util.concurrent.locks.ReentrantLock
+import kotlin.concurrent.withLock
 
 val logger: Logger = LoggerFactory.getLogger("Main")
 
@@ -20,6 +22,7 @@ fun runEchoServer() {
     ServerSocket().use { serverSocket ->
         serverSocket.bind(InetSocketAddress("0.0.0.0", PORT))
         var clientCount = 0
+        val lock = ReentrantLock()
         while (true) {
             logger.info("Waiting for clients to connect...")
             val clientSocket = serverSocket.accept()
